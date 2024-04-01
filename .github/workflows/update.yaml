@@ -2,7 +2,7 @@ name: achievement-collector
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   block_update:
@@ -17,7 +17,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12.1'
+          python-version: '3.7.7'
         
       - name: execute py script 
         run: python main.py
